@@ -15,11 +15,11 @@ __author__ = 'Dmitry Letyuk'
 
 # Подсказка: это значение точно есть ;)
 
-a = 0
+a = float('inf')
 
 print( a == a**2 )
 
 print( a == a * 2 )
 
-print(not ( a > 999999 ))
+print( a > 999999 )
 
