@@ -11,7 +11,7 @@ __author__ = 'Dmitry Letyuk'
 
 
 # раскладываем число как строку, по буквам
-number = input('ввдетие число:\n\t')
+number = input('введите число:\n\t')
 # num = [] # на всякий случай
 for let in number:
 #    num.append(int(let)) # как целые числа
