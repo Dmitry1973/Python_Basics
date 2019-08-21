@@ -17,6 +17,7 @@ fruits = ['яблоко', 'банан', 'киви', 'арбуз',]
 i = 1
 l = 0
 
+# варант 1
 for f in fruits:
     if l <= len(f):
         l = len(f)
@@ -24,6 +25,15 @@ for f in fruits:
     i +=1
 print('\n')
 
+# варант 1
+length = 0
+k = list(enumerate(fruits))
+for idx, fts in k:
+    if length <= len(fts):
+        length = len(fts)
+    print(f'{idx+1}:', fts.format().rjust(length + 1))
+#print(k)
+print('\n')
 
 # Задача-2:
 # Даны два произвольные списка.
@@ -34,7 +44,7 @@ b = [2, 'b', 4]
 
 print([i for i in a if i not in b])
 
-print(list(set(a)-set(b))) # через преобразование в множества
+print(list(set(a)-set(b)))
 print('\n')
 
 # Задача-3:
@@ -43,8 +53,10 @@ print('\n')
 # если элемент кратен двум, то разделить его на 4, если не кратен, то умножить на два.
 
 a = list(range(10))
+
 b = []
 
 for i in a:
     b.append(i * 2 if i%2 != 0 else i / 4)
 print(b)
+
