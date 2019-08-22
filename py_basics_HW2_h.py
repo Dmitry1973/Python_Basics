@@ -167,6 +167,5 @@ k = int(math.sqrt(len(piramid)))
 n = len(piramid)
 room_position = k if flat_idx % k == 0 else flat_idx % k
 
-print(k, n,)
 print('номер комнаты', flat_num)
 print('комната', room_position,'-ая слева')
