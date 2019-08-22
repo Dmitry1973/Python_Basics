@@ -141,11 +141,10 @@ print('\n')
 
 
 import math
-piramid = []
+piramid_top = []
 
 flat_num = int(input('введите номер квартиры:\n'))
 i = 0
-flats = 0
 block = 1
 flats_ = 0
 prev_f = 0
@@ -156,16 +155,22 @@ while flats_ < flat_num:
     l = [z for z in range(prev_f+1, flats_ +1)]
     i += 1
     prev_f = flats_
-    print(block,',', flats_, ',', l)
     block = i + 1
-    flats = i + 1
-    piramid = l[:]
+    piramid_top = l[:]
 
-flat_idx = piramid.index(flat_num) +1
+print(block,',', flats_, ',', piramid_top)
+flat_idx = piramid_top.index(flat_num) +1
 
-k = int(math.sqrt(len(piramid)))
-n = len(piramid)
+k = int(math.sqrt(len(piramid_top)))
+n = len(piramid_top)
+# room posotion on the floor
 room_position = k if flat_idx % k == 0 else flat_idx % k
 
-print('номер комнаты', flat_num)
+fl = 0
+for iz in range(0, k):
+    fl = fl + iz
+# room's floor
+floor = fl + k - (n - flat_idx) // k
+
+print('этаж ', floor,'-ый')
 print('комната', room_position,'-ая слева')
