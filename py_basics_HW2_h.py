@@ -139,28 +139,34 @@ print('\n')
 # Вход: 11
 # Выход: 5 3
 
+
+import math
 piramid = []
 
 flat_num = int(input('введите номер квартиры:\n'))
 i = 0
-k = 0
 flats = 0
-floor = 0
-f = []
+block = 1
+flats_ = 0
+prev_f = 0
 
+while flats_ < flat_num:
 
-while i < flat_num:
-    # prev_flat = 1
-    # floor = i + 1
-    # flats = floor ** 2 + flats
-    # piramid.insert(i, [flats-1])
-    # print(f'{piramid}, "floor" {floor}, "flats" {flats}')
-    # i += 1
-    # prev_flat = flats
-    floor = i + 1
-    flats = i + 1
-    f.insert(i, flats)
-    piramid.append(f)
+    flats_ = block ** 2 + flats_
+    l = [z for z in range(prev_f+1, flats_ +1)]
     i += 1
+    prev_f = flats_
+    print(block,',', flats_, ',', l)
+    block = i + 1
+    flats = i + 1
+    piramid = l[:]
 
-    print(floor, piramid,)
+flat_idx = piramid.index(flat_num) +1
+
+k = int(math.sqrt(len(piramid)))
+n = len(piramid)
+room_position = k if flat_idx % k == 0 else flat_idx % k
+
+print(k, n,)
+print('номер комнаты', flat_num)
+print('комната', room_position,'-ая слева')
