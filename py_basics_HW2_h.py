@@ -157,13 +157,12 @@ while flats_ < flat_num:
     prev_f = flats_
     block = i + 1
     piramid_top = l[:]
-
-print(block,',', flats_, ',', piramid_top)
+# room position in top row
 flat_idx = piramid_top.index(flat_num) +1
 
 k = int(math.sqrt(len(piramid_top)))
 n = len(piramid_top)
-# room posotion on the floor
+# room position on the floor
 room_position = k if flat_idx % k == 0 else flat_idx % k
 
 fl = 0
