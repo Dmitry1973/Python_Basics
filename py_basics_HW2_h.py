@@ -173,3 +173,5 @@ floor = fl + k - (n - flat_idx) // k
 
 print('этаж ', floor,'-ый')
 print('комната', room_position,'-ая слева')
+
+# коряво конечно, но считает правильно))
