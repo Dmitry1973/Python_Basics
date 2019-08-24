@@ -28,9 +28,23 @@ print(my_round(2.12254467, 6))
 # !!!P.S.: функция не должна НИЧЕГО print'ить
 
 def lucky_ticket(ticket_number):
-    pass
+    word  = str(ticket_number)
+    lst = []
+    for i in word:
+        lst.append(int(i))
+    if len(lst) % 2 != 0:
+        return 'Try next'
+    else:
+        half = int(len(lst) / 2)
+        h1 = lst[: half]
+        h2 = lst[half:]
+        if sum(h1) == sum(h2):
+            return 'Lucky'
+        else:
+            return None
 
 
 print(lucky_ticket(123006))
 print(lucky_ticket(12321))
 print(lucky_ticket(436751))
+print(lucky_ticket(4365445751))
