@@ -3,7 +3,24 @@
 # Первыми элементами ряда считать цифры 1 1
 
 def fibonacci(n, m):
-    pass
+    fibn1 = fibn2 = 1
+    #n = int(input("Номер элемента ряда Фибоначчи: ")) - 2
+    while n > 0:
+        fibn1, fibn2 = fibn2, fibn1 + fibn2
+        n -= 1
+
+    fibm1 = fibm2 = 1
+    #m = int(input("Номер элемента ряда Фибоначчи: ")) - 2
+
+    while m > 0:
+        fibm1, fibm2 = fibm2, fibm1 + fibm2
+        m -= 1
+
+
+    return print(abs(fibm2 - fibn2))
+
+
+fibonacci(12, 10)
 
 # Задача-2:
 # Напишите функцию, сортирующую принимаемый список по возрастанию.
