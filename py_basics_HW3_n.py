@@ -4,22 +4,15 @@
 
 # методом разностей фибоначей
 def fibonacci(n, m):
-    fibn1 = fibn2 = 1
-    #n = int(input("Номер элемента ряда Фибоначчи: ")) - 2
+    fibn1 = fibn2 = fibm1 = fibm2 = 1
     while n > 0:
         fibn1, fibn2 = fibn2, fibn1 + fibn2
         n -= 1
-
-    fibm1 = fibm2 = 1
-    #m = int(input("Номер элемента ряда Фибоначчи: ")) - 2
-
     while m > 0:
         fibm1, fibm2 = fibm2, fibm1 + fibm2
         m -= 1
-
-
+        
     return print(abs(fibm2 - fibn2))
-
 
 fibonacci(12, 10)
 
