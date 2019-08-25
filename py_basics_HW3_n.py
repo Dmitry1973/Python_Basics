@@ -42,6 +42,6 @@ sort_to_max([2, 10, -12, 2.5, 20, -11, 4, 4, 0])
 # Определить, будут ли они вершинами параллелограмма.
 def para(x1,y1,x2,y2,x3,y3,x4,y4):
     if y1 == y4 and y2 == y3 and abs(x1 - x2) == abs(x3 - x4):
-        return print('Is Parallelogramm')
+        return print('Is a Parallelogramm')
     else:
         return print('Not a Perallellogramm')
